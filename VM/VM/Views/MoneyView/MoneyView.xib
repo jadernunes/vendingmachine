@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MoneyView" customModule="VM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9W0-Td-tBY">
+                    <rect key="frame" x="20" y="41" width="98" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNS-eK-vDw">
+                    <rect key="frame" x="128" y="41" width="43" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-5J-Vwb">
+                    <rect key="frame" x="431" y="40" width="22" height="22"/>
+                    <connections>
+                        <action selector="buttonAddAmountPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ygG-XP-rpB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2i-1Q-XEU">
+                    <rect key="frame" x="345" y="36" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonAbortPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="kzi-gX-dzI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="y2i-1Q-XEU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eNS-eK-vDw" secondAttribute="trailing" constant="20" id="1RP-3L-Kjb"/>
+                <constraint firstItem="y2i-1Q-XEU" firstAttribute="centerY" secondItem="G8f-5J-Vwb" secondAttribute="centerY" id="Ncd-cE-DaN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="G8f-5J-Vwb" secondAttribute="trailing" constant="20" id="QgT-o1-JcZ"/>
+                <constraint firstItem="eNS-eK-vDw" firstAttribute="leading" secondItem="9W0-Td-tBY" secondAttribute="trailing" constant="10" id="T0H-2w-NLK"/>
+                <constraint firstItem="9W0-Td-tBY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ZtE-8a-ftX"/>
+                <constraint firstItem="eNS-eK-vDw" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="fud-cN-PcR"/>
+                <constraint firstItem="G8f-5J-Vwb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="h1m-wP-9hY"/>
+                <constraint firstItem="G8f-5J-Vwb" firstAttribute="leading" secondItem="y2i-1Q-XEU" secondAttribute="trailing" constant="40" id="k7v-C7-xZd"/>
+                <constraint firstItem="9W0-Td-tBY" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="vgD-W6-3ZK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="buttonAbort" destination="y2i-1Q-XEU" id="WRt-Gc-NPf"/>
+                <outlet property="buttonAddAmount" destination="G8f-5J-Vwb" id="rBO-2k-Nay"/>
+                <outlet property="labelAmount" destination="eNS-eK-vDw" id="Is9-IE-zdc"/>
+                <outlet property="labelTitleAmount" destination="9W0-Td-tBY" id="s5a-lN-c34"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="-174"/>
+        </view>
+    </objects>
+</document>
