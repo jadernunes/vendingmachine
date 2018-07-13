@@ -16,7 +16,6 @@ struct Money {
     private var amount: Variable<Int> = Variable<Int>(0)
     
     public mutating func addAmount(amount: Int, completion: @escaping ((Bool, String) -> Void)){
-        //TODO: Validate role
         if (self.amount.value + amount) <= 100 {
             self.amount.value += amount
             completion(true, "")
